@@ -2,35 +2,88 @@
 -- LOAD CSV DATA INTO SQL SERVER
 -- =========================================
 
--- Update this path to your local machine location
-DECLARE @dataPath VARCHAR(500) = 'C:\Users\Ian\Downloads\health-analytics\data\raw\';
+DECLARE @dataPath VARCHAR(500) = DECLARE @dataPath VARCHAR(500) = '<<< UPDATE LOCAL PATH HERE >>>';
 
-BULK INSERT patients
+
+-- Use CRLF or 0x0a depending on how the CSVs were saved.
+-- From Notepad screenshots, CRLF is likely correct.
+DECLARE @rowTerm NVARCHAR(10) = '\r\n';
+
+-------------------------
+-- Patients
+-------------------------
+BULK INSERT dbo.Patients
 FROM @dataPath + 'patients.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
-BULK INSERT doctors
+-------------------------
+-- Doctors
+-------------------------
+BULK INSERT dbo.Doctors
 FROM @dataPath + 'doctors.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
-BULK INSERT hospitals
+-------------------------
+-- Hospitals
+-------------------------
+BULK INSERT dbo.Hospitals
 FROM @dataPath + 'hospitals.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
-BULK INSERT medical_conditions
+-------------------------
+-- Medical Conditions
+-------------------------
+BULK INSERT dbo.MedicalConditions
 FROM @dataPath + 'medical_conditions.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
-BULK INSERT medications
+-------------------------
+-- Medications
+-------------------------
+BULK INSERT dbo.Medications
 FROM @dataPath + 'medications.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
-BULK INSERT insurance_providers
+-------------------------
+-- Insurance Providers
+-------------------------
+BULK INSERT dbo.InsuranceProviders
 FROM @dataPath + 'insurance_providers.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
-BULK INSERT encounters
+-------------------------
+-- Encounters
+-------------------------
+BULK INSERT dbo.Encounters
 FROM @dataPath + 'encounters.csv'
-WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '\n');
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR   = @rowTerm
+);
 
 
