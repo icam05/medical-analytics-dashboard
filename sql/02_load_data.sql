@@ -1,5 +1,5 @@
 -- =========================================
--- LOAD CSV DATA INTO SQL SERVER
+--  SET YOUR LOCAL FILE PATH HERE BEFORE RUNNING
 -- =========================================
 
 DECLARE @dataPath VARCHAR(500) = DECLARE @dataPath VARCHAR(500) = '<<< UPDATE LOCAL PATH HERE >>>';
