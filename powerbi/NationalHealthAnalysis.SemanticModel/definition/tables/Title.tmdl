@@ -1,0 +1,48 @@
+table Title
+	lineageTag: fafa30f4-b2cd-4938-ba11-b78d38247e60
+
+	column Billing
+		lineageTag: 80498869-9fc0-4d40-9a17-1d4a2ac564e8
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Billing Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Billing Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billing Fields'
+		isHidden
+		lineageTag: 6d316d65-2dcc-4603-a3ee-dc59a21ed194
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Billing Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Billing Order'
+		isHidden
+		formatString: 0
+		lineageTag: e11acb24-b290-4ad2-8cfd-10198698a530
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Title = calculated
+		mode: import
+		source =
+				{
+				    ("Hospitals", NAMEOF('HealthData'[Hospitals]), 0),
+				    ("Insurance Provider", NAMEOF('HealthData'[Insurance Provider]), 1)
+				}
+
+	annotation PBI_Id = f4381146da3a42e2ae2c64128fac43b2
+

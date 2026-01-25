@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "a0ce6a40104007c7d58c",
+  "position": {
+    "x": 960.00000000000011,
+    "y": 518.18181818181824,
+    "z": 30000,
+    "height": 121.36363636363637,
+    "width": 349.09090909090912,
+    "tabOrder": 30000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DAX"
+                    }
+                  },
+                  "Property": "Top Medication"
+                }
+              },
+              "queryRef": "DAX.Top Medication Name",
+              "nativeQueryRef": "Top Medication"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

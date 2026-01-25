@@ -1,0 +1,57 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Data Dictionary'
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup 'Fact Table'
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup 'Dim Table'
+
+	annotation PBI_QueryGroupOrder = 3
+
+queryGroup 'Data Source'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["Data Dictionary","HealthData","DAX","DimCondition","DataFolder","FilePath","Doctors","Hospitals","InsuranceProviders","Medications","Patients","MedicalConditions","v_AgeGrouping","v_EncounterAnalytics","v_PatientDemographics","v_YearlyKpi"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table HealthData
+ref table DateTableTemplate_56a29850-37a1-46cd-9a8d-d5768681d90d
+ref table LocalDateTable_3fbd6332-b26e-4080-bd05-3ac6985d8ff1
+ref table DAX
+ref table DimCondition
+ref table Calendar
+ref table LocalDateTable_f5bcf0da-3074-4b36-a805-4dfc1bce659f
+ref table LocalDateTable_1b53f7e8-479d-47b2-8d22-521a231fcfb6
+ref table Doctors
+ref table Hospitals
+ref table InsuranceProviders
+ref table Medications
+ref table Patients
+ref table MedicalConditions
+ref table Title
+ref table KPI
+ref table v_AgeGrouping
+ref table v_EncounterAnalytics
+ref table LocalDateTable_60e41911-07b3-4b85-a666-96bfaf7ead66
+ref table LocalDateTable_d5f8c7b4-d865-4d74-b3df-8a0dad043a4b
+ref table v_PatientDemographics
+ref table LocalDateTable_ea727f5f-17f9-4b83-8e83-66d74f80f4fe
+ref table LocalDateTable_e10236b6-31b9-45c0-8ee2-9f357d13fe08
+ref table v_YearlyKpi
+
+ref cultureInfo en-US
+

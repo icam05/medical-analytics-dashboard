@@ -1,0 +1,85 @@
+table v_YearlyKpi
+	lineageTag: 4d1241a9-dae5-484f-a2e1-5ebc3731e409
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: cdfd5955-e199-4bd0-8c5d-8db21c092518
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column admitted_patients
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b2acb7e-722c-4542-9292-e28fbd29a3ad
+		summarizeBy: sum
+		sourceColumn: admitted_patients
+
+		annotation SummarizationSetBy = Automatic
+
+	column rooms_beds
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ffd0f29-2870-4753-aea1-9d264677cd4e
+		summarizeBy: sum
+		sourceColumn: rooms_beds
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctors
+		dataType: int64
+		formatString: 0
+		lineageTag: c0de3c71-d504-4036-84bc-e22029f2b3ef
+		summarizeBy: sum
+		sourceColumn: doctors
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_length_of_stay
+		dataType: double
+		lineageTag: 98b7c5ec-eeca-4ed1-a4f1-ba76e697a314
+		summarizeBy: sum
+		sourceColumn: avg_length_of_stay
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_patient_age
+		dataType: double
+		lineageTag: 9f6efc38-c02d-4462-8aa3-7ecd4a7cd76b
+		summarizeBy: sum
+		sourceColumn: avg_patient_age
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_billing
+		dataType: double
+		lineageTag: 501e3c1d-4baf-4155-9ec5-c8b5d37d51fd
+		summarizeBy: sum
+		sourceColumn: total_billing
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition v_YearlyKpi = m
+		mode: import
+		queryGroup: 'Data Dictionary'
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-CQ2LR2p", "IngestionPlatform"),
+				    dbo_YearlyKpi = Source{[Schema="dbo",Item="YearlyKpi"]}[Data]
+				in
+				    dbo_YearlyKpi
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

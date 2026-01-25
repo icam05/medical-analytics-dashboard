@@ -1,0 +1,238 @@
+table v_EncounterAnalytics
+	lineageTag: 7de7a036-d2fc-4a1b-a663-fb3bf8bfe76f
+
+	column encounter_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c665d8f7-51fa-411f-b4b9-17ce601404b8
+		summarizeBy: sum
+		sourceColumn: encounter_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: 186a9714-768a-4733-8b09-4a074ad8019c
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: 60b7e32a-8344-4743-83bd-841350e03b9c
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 5eb570e5-a113-4d0b-bb8a-b674f4d6f0fa
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column blood_type
+		dataType: string
+		lineageTag: 2d4c4581-7d45-47ee-9f65-df91b8272dc3
+		summarizeBy: none
+		sourceColumn: blood_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_of_admission
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8802156c-951a-4f9d-a79f-b13256f9f712
+		summarizeBy: none
+		sourceColumn: date_of_admission
+
+		variation Variation
+			isDefault
+			relationship: 2cb282ec-ac67-4e5d-a6cb-c38dd599b197
+			defaultHierarchy: LocalDateTable_60e41911-07b3-4b85-a666-96bfaf7ead66.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column discharge_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aa27b16d-28de-4fac-8fe2-cf2d39b1add1
+		summarizeBy: none
+		sourceColumn: discharge_date
+
+		variation Variation
+			isDefault
+			relationship: bef8445b-e142-4faf-8b32-34653af62c3b
+			defaultHierarchy: LocalDateTable_d5f8c7b4-d865-4d74-b3df-8a0dad043a4b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column length_of_stay
+		dataType: int64
+		formatString: 0
+		lineageTag: 12412d01-6c0a-4f71-a2c3-532b65a02645
+		summarizeBy: sum
+		sourceColumn: length_of_stay
+
+		annotation SummarizationSetBy = Automatic
+
+	column room_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 452eb5e3-0d0f-45ac-a6d9-23bce5fb8130
+		summarizeBy: sum
+		sourceColumn: room_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column admission_type
+		dataType: string
+		lineageTag: f47c26f8-da84-4adc-961f-2a4056d84506
+		summarizeBy: none
+		sourceColumn: admission_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_amount
+		dataType: double
+		lineageTag: 37caead8-ab7b-44da-8592-b660702aa9d9
+		summarizeBy: sum
+		sourceColumn: billing_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column test_results
+		dataType: string
+		lineageTag: d927b4fd-2fa1-45d2-8214-68f6d7d1d687
+		summarizeBy: none
+		sourceColumn: test_results
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 19fe32d4-84bb-403b-acbd-49c8ece43c82
+		summarizeBy: sum
+		sourceColumn: hospital_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_name
+		dataType: string
+		lineageTag: 7f3236c9-25d5-4523-b1c4-896510b85724
+		summarizeBy: none
+		sourceColumn: hospital_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_latitude
+		dataType: double
+		lineageTag: 5b2fe5c7-b4ef-4e2e-b4cc-4d6b8ce97e6c
+		summarizeBy: sum
+		sourceColumn: hospital_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column hospital_longitude
+		dataType: double
+		lineageTag: 9bd2af57-60cc-4de1-bebd-d682f86bc538
+		summarizeBy: sum
+		sourceColumn: hospital_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column doctor_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ce8c4a48-6d22-43c8-a1e3-6cf45a3b3573
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_name
+		dataType: string
+		lineageTag: ca7319f0-36fe-420f-b97a-e6dd09bdb74c
+		summarizeBy: none
+		sourceColumn: doctor_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column insurance_provider_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 773f2f91-cf86-4928-9c18-ea47caec7132
+		summarizeBy: none
+		sourceColumn: insurance_provider_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column insurance_provider_name
+		dataType: string
+		lineageTag: 82c1d74f-efb3-412a-8d39-8cea8c3fb024
+		summarizeBy: none
+		sourceColumn: insurance_provider_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column medical_condition_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6860216f-b318-4cab-a906-ec4dee44da41
+		summarizeBy: none
+		sourceColumn: medical_condition_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column medical_condition_name
+		dataType: string
+		lineageTag: 545741e1-d684-4255-80bd-25aa32bb3083
+		summarizeBy: none
+		sourceColumn: medical_condition_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column medication_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f0fbced3-e95e-4d91-8c72-43dd833a78bf
+		summarizeBy: none
+		sourceColumn: medication_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column medication_name
+		dataType: string
+		lineageTag: e35227a8-401f-4492-8508-077faa836da6
+		summarizeBy: none
+		sourceColumn: medication_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition v_EncounterAnalytics = m
+		mode: import
+		queryGroup: 'Data Dictionary'
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-CQ2LR2p", "IngestionPlatform"),
+				    dbo_EncounterAnalytics = Source{[Schema="dbo",Item="EncounterAnalytics"]}[Data]
+				in
+				    dbo_EncounterAnalytics
+
+	changedProperty = Name
+

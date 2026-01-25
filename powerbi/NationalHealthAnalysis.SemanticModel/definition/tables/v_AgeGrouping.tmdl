@@ -1,0 +1,39 @@
+table v_AgeGrouping
+	lineageTag: e0998b51-06f3-4488-a037-56b41e817dcb
+
+	column patient_id
+		dataType: string
+		lineageTag: 0a1aa0ee-9214-4f6d-8f68-b643aba94025
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: f1642e9e-8520-4350-80dd-1c78bb3f9abb
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: d1e8973b-1aae-449a-ac6b-b1c00548dedc
+		summarizeBy: none
+		sourceColumn: age_group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition v_AgeGrouping = m
+		mode: import
+		queryGroup: 'Data Dictionary'
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-CQ2LR2p", "IngestionPlatform"),
+				    dbo_AgeGrouping = Source{[Schema="dbo",Item="AgeGrouping"]}[Data]
+				in
+				    dbo_AgeGrouping
+
+	changedProperty = Name
+

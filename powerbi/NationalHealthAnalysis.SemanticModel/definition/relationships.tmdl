@@ -1,0 +1,145 @@
+relationship ecc53ca9-ad89-456a-8157-c5f461820071
+	joinOnDateBehavior: datePartOnly
+	fromColumn: HealthData.'Discharge Date'
+	toColumn: LocalDateTable_3fbd6332-b26e-4080-bd05-3ac6985d8ff1.Date
+
+relationship AutoDetected_3fe6f3c2-dcfe-4540-9c63-a9a821d504c8
+	fromColumn: HealthData.'Condition ID'
+	toColumn: DimCondition.'Condition ID'
+
+relationship 79dda626-9f80-4e47-a773-53a47460a3c0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendar.Date
+	toColumn: LocalDateTable_f5bcf0da-3074-4b36-a805-4dfc1bce659f.Date
+
+relationship 2fd6a5a9-5842-7a76-6e16-fabfb72a8435
+	fromColumn: HealthData.'Date of Admission'
+	toColumn: Calendar.Date
+
+relationship d9346d45-b31a-4ae4-8911-12fb008af6a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendar.Weekending
+	toColumn: LocalDateTable_1b53f7e8-479d-47b2-8d22-521a231fcfb6.Date
+
+relationship AutoDetected_6024316e-4898-4be7-a552-45ed850d67f7
+	fromColumn: HealthData.'Hospital Latitude'
+	toColumn: Hospitals.hospital_latitude
+
+relationship AutoDetected_53161a9c-c0f3-47ff-84b5-4b955803e0a3
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: MedicalConditions.medical_condition_name
+	toColumn: DimCondition.'Medical Condition'
+
+relationship 2cb282ec-ac67-4e5d-a6cb-c38dd599b197
+	joinOnDateBehavior: datePartOnly
+	fromColumn: v_EncounterAnalytics.date_of_admission
+	toColumn: LocalDateTable_60e41911-07b3-4b85-a666-96bfaf7ead66.Date
+
+relationship bef8445b-e142-4faf-8b32-34653af62c3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: v_EncounterAnalytics.discharge_date
+	toColumn: LocalDateTable_d5f8c7b4-d865-4d74-b3df-8a0dad043a4b.Date
+
+relationship 9313b458-eae0-4d2a-999e-b9317200fe20
+	joinOnDateBehavior: datePartOnly
+	fromColumn: v_PatientDemographics.date_of_admission
+	toColumn: LocalDateTable_ea727f5f-17f9-4b83-8e83-66d74f80f4fe.Date
+
+relationship 4c532251-4d4e-4cba-9cb0-41f7506b239c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: v_PatientDemographics.discharge_date
+	toColumn: LocalDateTable_e10236b6-31b9-45c0-8ee2-9f357d13fe08.Date
+
+relationship AutoDetected_d699a0c2-fcff-4ce8-845e-b260ecee6c07
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_AgeGrouping.patient_id
+	toColumn: HealthData.'Patient ID'
+
+relationship AutoDetected_7a30e98c-4531-42ae-b92d-78b10f46d589
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_EncounterAnalytics.patient_id
+	toColumn: HealthData.'Patient ID'
+
+relationship AutoDetected_9fa8fddc-ac51-4bd0-be03-ac7106999c0a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_PatientDemographics.patient_id
+	toColumn: HealthData.'Patient ID'
+
+relationship AutoDetected_43012037-1e55-4f0c-ba9b-41a81ef4405e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_AgeGrouping.patient_id
+	toColumn: Patients.patient_id
+
+relationship AutoDetected_530cefd2-d43a-408a-9b14-2605e0cf46c5
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_EncounterAnalytics.patient_id
+	toColumn: Patients.patient_id
+
+relationship AutoDetected_9d685b46-1353-413b-a3c3-bf6159986d30
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_PatientDemographics.patient_id
+	toColumn: Patients.patient_id
+
+relationship AutoDetected_45c10329-3313-4a74-a7ac-f885820b8129
+	isActive: false
+	fromColumn: v_EncounterAnalytics.hospital_latitude
+	toColumn: Hospitals.hospital_latitude
+
+relationship AutoDetected_c2adf90f-d9a0-4f44-b395-00bb02cdd3f4
+	isActive: false
+	fromColumn: v_PatientDemographics.hospital_latitude
+	toColumn: Hospitals.hospital_latitude
+
+relationship AutoDetected_a860fc18-a333-4946-b230-eb53ff528bc5
+	fromColumn: v_EncounterAnalytics.doctor_id
+	toColumn: Doctors.doctor_id
+
+relationship AutoDetected_96ab0b49-0713-46fe-b20d-4e3cbfeb2c8f
+	isActive: false
+	fromColumn: v_PatientDemographics.doctor_id
+	toColumn: Doctors.doctor_id
+
+relationship AutoDetected_19151151-4bd7-4f68-a637-812e616a4928
+	fromColumn: v_EncounterAnalytics.insurance_provider_id
+	toColumn: InsuranceProviders.insurance_provider_id
+
+relationship AutoDetected_1e27746f-0fed-479e-8725-4f56a45e3d00
+	fromColumn: v_EncounterAnalytics.medication_id
+	toColumn: Medications.medication_id
+
+relationship AutoDetected_10bb0d06-5481-47f6-aa82-e1adcf4d4ceb
+	fromColumn: v_EncounterAnalytics.medical_condition_id
+	toColumn: MedicalConditions.medical_condition_id
+
+relationship AutoDetected_a0e4d189-6564-418e-9f7b-c8c415efa8dd
+	isActive: false
+	fromColumn: v_PatientDemographics.medical_condition_id
+	toColumn: MedicalConditions.medical_condition_id
+
+relationship AutoDetected_0d58cc04-1de7-4ec1-a469-03bc7add7993
+	isActive: false
+	fromColumn: v_EncounterAnalytics.medical_condition_name
+	toColumn: DimCondition.'Medical Condition'
+
+relationship AutoDetected_ab5992c6-3f80-49ba-8204-ef2a80a9bf88
+	isActive: false
+	fromColumn: v_PatientDemographics.medical_condition_name
+	toColumn: DimCondition.'Medical Condition'
+
+relationship AutoDetected_59958f84-bb8d-4b1e-b1ff-08ee04266251
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: v_PatientDemographics.encounter_id
+	toColumn: v_EncounterAnalytics.encounter_id
+

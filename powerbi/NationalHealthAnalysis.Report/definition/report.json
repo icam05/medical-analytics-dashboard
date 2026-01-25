@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": {
+        "visual": "1.8.98",
+        "report": "2.0.98",
+        "page": "1.3.98"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom738255634541291.json",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "ZoomChartsFacetChartFree33C9F325D337408C98D4E1D4E1EAD704",
+    "ZoomChartsDrillDownComboBarProE77E4ED357DC402ABA005987437CF800",
+    "ZoomChartsFacetChartPaidE77E4ED357DC402ABA005987437CF500",
+    "ZoomChartsPieChartPaidE77E4ED357DC402ABA005987437CF500"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Health13473979621098844.jpg",
+          "path": "Health13473979621098844.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Health236004692242507863.jpg",
+          "path": "Health236004692242507863.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Health32859783888382683.jpg",
+          "path": "Health32859783888382683.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Custom738255634541291.json",
+          "path": "Custom738255634541291.json",
+          "type": "CustomTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

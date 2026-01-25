@@ -1,0 +1,240 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1054.2905536151038,
+            "y": 358.49643435996921
+          },
+          "nodeIndex": "HealthData",
+          "nodeLineageTag": "a0149ef8-aa2e-400f-b600-f5ff0da7de7b",
+          "size": {
+            "height": 279.746835443038,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1455.4833519920621,
+            "y": 738.68017158661007
+          },
+          "nodeIndex": "DAX",
+          "nodeLineageTag": "ab35c151-932f-4c3c-ba1d-a28f77545803",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1006.8901080255689,
+            "y": 25
+          },
+          "nodeIndex": "DimCondition",
+          "nodeLineageTag": "e3b374f4-e0ae-462c-b64b-b6fac880ec5a",
+          "size": {
+            "height": 167.24050632911394,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 788.59303174014246,
+            "y": 366.88509298610978
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "93a6fe13-7adb-4df5-b47a-2207ca1f3cf3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 122.5394365296076,
+            "y": 391.65649150241472
+          },
+          "nodeIndex": "Doctors",
+          "nodeLineageTag": "b1dac444-164c-48e0-8d89-71ef978e25fd",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 584.6172168274278
+          },
+          "nodeIndex": "Hospitals",
+          "nodeLineageTag": "b97cf0b0-de47-4ea4-8070-a4b947eaa4eb",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 525.39089836048527,
+            "y": 372.46835443037975
+          },
+          "nodeIndex": "InsuranceProviders",
+          "nodeLineageTag": "e883e692-201f-4ee0-b2d6-ef7db5a0e222",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 610.72630570714682,
+            "y": 25
+          },
+          "nodeIndex": "MedicalConditions",
+          "nodeLineageTag": "695fa2e5-f3c1-464e-8ef4-6186f7de3a5d",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 25
+          },
+          "nodeIndex": "Medications",
+          "nodeLineageTag": "94043264-a42d-4929-aee2-90d3de0fe010",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 256.28627197264552,
+            "y": 577.62154793551406
+          },
+          "nodeIndex": "Patients",
+          "nodeLineageTag": "742fc9b1-57d3-474c-a541-45be7659808d",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1427.7365165490244,
+            "y": 164.56489727154113
+          },
+          "nodeIndex": "KPI",
+          "nodeLineageTag": "cb488041-d298-4f33-a541-e5054722d7a3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1431.0782887009227,
+            "y": 420.26109980318665
+          },
+          "nodeIndex": "Title",
+          "nodeLineageTag": "fafa30f4-b2cd-4938-ba11-b78d38247e60",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2591.4833519920621,
+            "y": 297.84008579330504
+          },
+          "nodeIndex": "v_YearlyKpi",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1789.4833519920621,
+            "y": 221.84008579330504
+          },
+          "nodeIndex": "v_PatientDemographics",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2307.4833519920621,
+            "y": 345.84008579330504
+          },
+          "nodeIndex": "v_AgeGrouping",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2073.4833519920621,
+            "y": 221.84008579330504
+          },
+          "nodeIndex": "v_EncounterAnalytics",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 79,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Layout 1",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

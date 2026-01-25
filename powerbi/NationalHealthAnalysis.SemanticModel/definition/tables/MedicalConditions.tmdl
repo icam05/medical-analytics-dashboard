@@ -1,0 +1,29 @@
+table MedicalConditions
+	lineageTag: 695fa2e5-f3c1-464e-8ef4-6186f7de3a5d
+
+	column medical_condition_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 74925d17-703d-4736-a039-a81c20df6604
+		summarizeBy: none
+		sourceColumn: medical_condition_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column medical_condition_name
+		dataType: string
+		lineageTag: c2d8e349-0e37-4270-a5f2-f06b0fb92cf4
+		summarizeBy: none
+		sourceColumn: medical_condition_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MedicalConditions = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "IngestionPlatform"),
+				    dbo_MedicalConditions = Source{[Schema="dbo",Item="MedicalConditions"]}[Data]
+				in
+				    dbo_MedicalConditions
+

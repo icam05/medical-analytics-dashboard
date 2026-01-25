@@ -1,0 +1,29 @@
+table InsuranceProviders
+	lineageTag: e883e692-201f-4ee0-b2d6-ef7db5a0e222
+
+	column insurance_provider_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 605a6ad6-9d5d-4480-9d7e-c66af251dca8
+		summarizeBy: none
+		sourceColumn: insurance_provider_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column insurance_provider_name
+		dataType: string
+		lineageTag: 9b634cb8-a98a-4839-ae14-b9328a45eddd
+		summarizeBy: none
+		sourceColumn: insurance_provider_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition InsuranceProviders = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "IngestionPlatform"),
+				    dbo_InsuranceProviders = Source{[Schema="dbo",Item="InsuranceProviders"]}[Data]
+				in
+				    dbo_InsuranceProviders
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "NationalHealthAnalysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0ee456c4-c57e-4696-8f0e-6727d8e2c188"
+  }
+}

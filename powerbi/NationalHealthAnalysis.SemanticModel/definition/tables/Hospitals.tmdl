@@ -1,0 +1,49 @@
+table Hospitals
+	lineageTag: b97cf0b0-de47-4ea4-8070-a4b947eaa4eb
+
+	column hospital_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 782b731f-0e5e-4767-919b-0a48f8e4967a
+		summarizeBy: none
+		sourceColumn: hospital_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_name
+		dataType: string
+		lineageTag: 1183232b-a9cf-4445-ae63-08e60b503186
+		summarizeBy: none
+		sourceColumn: hospital_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospital_latitude
+		dataType: double
+		lineageTag: 583dc291-eeb4-4df5-ad7c-0dfca134fd46
+		summarizeBy: none
+		sourceColumn: hospital_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column hospital_longitude
+		dataType: double
+		lineageTag: 743e412b-cdc1-4e3b-9c54-c70c9f2796a7
+		summarizeBy: none
+		sourceColumn: hospital_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Hospitals = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "IngestionPlatform"),
+				    dbo_Hospitals = Source{[Schema="dbo",Item="Hospitals"]}[Data]
+				in
+				    dbo_Hospitals
+

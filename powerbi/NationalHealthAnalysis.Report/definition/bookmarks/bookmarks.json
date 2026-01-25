@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "57c1ce7cd0201c29db69",
+      "displayName": "Demographics",
+      "children": [
+        "19a0efff22538d53329a",
+        "c5fbd9b989ce56e2467a",
+        "ebcce5b120c92eba5b0e"
+      ]
+    }
+  ]
+}

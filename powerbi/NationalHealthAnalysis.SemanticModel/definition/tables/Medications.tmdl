@@ -1,0 +1,29 @@
+table Medications
+	lineageTag: 94043264-a42d-4929-aee2-90d3de0fe010
+
+	column medication_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 83bfe100-b5f4-4424-a19f-8ead18032861
+		summarizeBy: none
+		sourceColumn: medication_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column medication_name
+		dataType: string
+		lineageTag: 60d99af0-b2b2-4ad9-9d66-24b07ab85637
+		summarizeBy: none
+		sourceColumn: medication_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medications = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost", "IngestionPlatform"),
+				    dbo_Medications = Source{[Schema="dbo",Item="Medications"]}[Data]
+				in
+				    dbo_Medications
+
