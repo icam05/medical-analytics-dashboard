@@ -4,6 +4,17 @@ A complete end-to-end healthcare analytics project using SQL Server, Python, R, 
 
 This repository showcases a full data-engineering and analytics workflow similar to what is used inside MLTC plans, Health Plans, Hospice organizations, and Managed Care analytics environments (e.g., Reveleer, CCNY, Sentara, and HomeCare Partners). It includes:
 
+**[▶️ National Health Analytics – Interactive Power BI Report](https://app.powerbi.com/view?r=eyJrIjoiYTk3NWM5MTQtOWMwNS00NzNlLTgwYjYtOThhNjA5Y2QxMjAzIiwidCI6IjZlMjY5MzE1LWM2NTAtNDM3Zi1iMzE3LTFhODQyOWRlZjM3MyJ9)**
+
+This dashboard includes:
+
+- Patient demographics
+- Key health trends
+- Treatment & cost analytics
+- KPI summaries
+- Billing and utilization patterns
+- Medication & condition insights
+
 Automated data ingestion from CSV files
 
 SQL Server data modeling (DDL)
@@ -87,7 +98,7 @@ Care Management
 Population Health Analytics
 
 2. Tech Stack
-Languages & Tools
+   Languages & Tools
 
 SQL Server — data modeling, querying, DDL/DML
 
@@ -113,44 +124,42 @@ Power BI report design & relationships
 
 End-to-end analytics project organization
 
-
 health-analytics/
 │
 ├── data/
-│   └── raw/                    # Source CSV files
+│ └── raw/ # Source CSV files
 │
 ├── ingestion/
-│   └── load_to_sql.py          # Python ingestion script
+│ └── load_to_sql.py # Python ingestion script
 │
 ├── powerbi/
-│   └── health_dashboard/       # Power BI PBIP project
+│ └── health_dashboard/ # Power BI PBIP project
 │
 ├── sql/
-│   ├── 01_create_tables.sql    # Creates all SQL tables
-│   └── 02_load_data.sql        # Bulk loads CSV data
+│ ├── 01_create_tables.sql # Creates all SQL tables
+│ └── 02_load_data.sql # Bulk loads CSV data
 │
 ├── .gitignore
 ├── LICENSE
 └── README.md
 
-
 4. Dataset Description
 
 Each dataset represents a core domain of healthcare operations:
 
-File	Description
-patients.csv	Demographics, gender, blood type
-doctors.csv	Clinicians by ID
-hospitals.csv	Facilities + latitude/longitude
-medical_conditions.csv	Primary diagnosis categories
-medications.csv	Medication reference list
-insurance_providers.csv	Payers/health plans
-encounters.csv	Admissions, LOS, billing amounts, diagnosis, etc.
+File Description
+patients.csv Demographics, gender, blood type
+doctors.csv Clinicians by ID
+hospitals.csv Facilities + latitude/longitude
+medical_conditions.csv Primary diagnosis categories
+medications.csv Medication reference list
+insurance_providers.csv Payers/health plans
+encounters.csv Admissions, LOS, billing amounts, diagnosis, etc.
 
 All files are intentionally lightweight to allow quick ingestion and testing.
 
 5. SQL Server Setup
-Step 1 — Create Tables
+   Step 1 — Create Tables
 
 Run:
 sql/01_create_tables.sql
@@ -319,9 +328,3 @@ Publishing a live Power BI dashboard
 11. License
 
 This project is available under the MIT License.
-
-
-
-
-
-
