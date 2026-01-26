@@ -1,0 +1,9 @@
+ServiceID,ServiceName,Category,MinAge,MaxAge,SexEligibility,IntervalYears,Notes
+1,COVID-19 vaccine,Vaccine,18,,All,1,Annual booster assumed for demo
+2,Influenza vaccine,Vaccine,18,,All,1,Yearly flu shot
+3,Pneumococcal vaccine,Vaccine,65,,All,1,Once after 65 for demo
+4,Shingles vaccine,Vaccine,50,,All,1,Single series after 50
+5,Colonoscopy,Screening,50,75,All,10,Every 10 years age 50-75
+6,Mammogram,Screening,40,74,F,2,Every 2 years for females
+7,Dental checkup,Visit,18,,All,1,Annual dental visit
+8,Annual physical,Visit,18,,All,1,Yearly primary care visit
